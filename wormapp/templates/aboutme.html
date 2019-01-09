@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+
+<body onload="typeWriter()">
+<h2 hidden id = "story"> i'm just a worm no one cares about him living in a hole in the ground \n
+, alone , sad , just eating progrmmi... , 
+i mean sleeping with no goal in life , propply the death is the slouion </h2>
+<p id="Stext"></p>
+<script>
+
+var i = 0;
+var txt = document.getElementById("story").innerHTML;
+var speed = 100;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("Stext").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+
+</body>
+</html>
+<audio autoplay="true">
+	<source src={% static "sad.ogg" %} type="audio/ogg">
+	<source src={% static "sad.mp3" %} type="audio/mpeg">
+
+</audio>
+
+<img src="{% static "sadworm.jpg" %}" alt="worm dancing width="500" height="500"">
+</center>
+
+<style>
+body{
+  margin:0;
+  padding:0;
+  background-color:		#ADFF2F;
+}
+
+div{
+  position:relative;
+  width:600px;
+  height:auto;
+  margin:0 auto;
+}
+</style>
+
+</body>
+</html>
